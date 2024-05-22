@@ -19,12 +19,16 @@ const routes: Routes = [
   {
     path: 'add-store',
     component: AddStoreComponent,
-    canActivate:[AuthGuard]
+    canActivate: [AuthGuard]
   },
-  { path: '', component:HomePageComponent, canActivate: [AuthGuard] },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  { path: '', component: HomePageComponent, canActivate: [AuthGuard] },
   // { path: 'users', loadChildren: usersModule, canActivate: [AuthGuard] },
   // { path: 'account', loadChildren: accountModule },
-  { path: '**', redirectTo: '' }
+  // { path: '**', redirectTo: '' }
 
 ];
 
